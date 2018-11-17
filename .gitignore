@@ -1,0 +1,9 @@
+
+# credentials
+/credentials/*
+
+# IDE
+/.idea
+
+# package library
+/node_modules
