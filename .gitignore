@@ -7,3 +7,7 @@
 
 # package library
 /node_modules
+
+# development API
+/routes/text.js
+/upload.js
