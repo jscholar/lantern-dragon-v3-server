@@ -4,9 +4,11 @@ const mongoose = require('mongoose');
 
 // API routes
 const commentsRoutes = require('./routes/comments');
+const textRoutes = require('./routes/text');
+const chapterRoutes = require('./routes/chapters');
 
 // Specify database URI
-const uri = require('./credentials/uri.js');
+const uri = require('./credentials/URI');
 
 
 mongoose.connect(uri)
@@ -35,6 +37,8 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use("/api/posts", commentsRoutes);
+app.use("/api/posts/comments", commentsRoutes);
+app.use("/api/posts/text", textRoutes);
+app.use("api/chapters/", chapterRoutes);
 
 module.exports = app;
